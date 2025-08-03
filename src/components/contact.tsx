@@ -7,7 +7,7 @@ export function Contact() {
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-12">
           <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl">Let's work together!</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl">Let&apos;s work together!</h2>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Ready to create something amazing? I&apos;m always excited to work with new people 
               and bring ideas to life. Let&apos;s chat about your project!

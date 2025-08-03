@@ -15,7 +15,7 @@ export function Hero() {
             <div className="space-y-6">
               <h1>
                 <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-                  Hi, I'm Jebs
+                  Hi, I&apos;m Jebs
                 </span>
                 <br />
                 <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-normal">
@@ -32,7 +32,7 @@ export function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center btn-group">
               <Button size="lg" className="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                Let's Work Together
+                Let&apos;s Work Together
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="group border-blue-500/30 hover:border-blue-500 hover:bg-blue-500/10 px-8 py-6 text-lg font-semibold">
