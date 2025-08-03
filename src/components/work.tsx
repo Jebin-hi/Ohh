@@ -42,11 +42,11 @@ export function Work() {
     <section id="work" className="container mx-auto container-spacing section-padding">
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-12 mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl">Stuff I've worked on</h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Here are some projects I'm pretty proud of. Each one taught me something new 
-            and helped me grow as a writer.
-          </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl">Stuff I&apos;ve worked on</h2>
+                      <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Here are some projects I&apos;m pretty proud of. Each one taught me something new 
+              and helped me grow as a writer.
+            </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-10">
           {workProjects.map((project, index) => (

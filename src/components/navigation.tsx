@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Mail, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export function Navigation() {
   return (

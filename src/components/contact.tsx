@@ -9,8 +9,8 @@ export function Contact() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl">Let's work together!</h2>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Ready to create something amazing? I'm always excited to work with new people 
-              and bring ideas to life. Let's chat about your project!
+              Ready to create something amazing? I&apos;m always excited to work with new people 
+              and bring ideas to life. Let&apos;s chat about your project!
             </p>
           </div>
           

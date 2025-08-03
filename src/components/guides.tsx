@@ -29,10 +29,10 @@ export function Guides() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-12 mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl">My Guides</h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I love sharing what I've learned. Here are some guides I've written to help 
-            other writers and businesses create better content.
-          </p>
+                      <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              I love sharing what I&apos;ve learned. Here are some guides I&apos;ve written to help 
+              other writers and businesses create better content.
+            </p>
         </div>
         <div className="grid md:grid-cols-3 gap-10">
           {guides.map((guide, index) => (

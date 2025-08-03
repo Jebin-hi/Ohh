@@ -8,16 +8,16 @@ export function About() {
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl lg:text-6xl">A bit about me</h2>
             <div className="space-y-6">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Hey there! I'm Jebin (but everyone calls me Jebs). I've been crafting words 
-                that actually matter for the past 5+ years. My superpower? Making complex ideas 
-                sound simple and boring topics sound exciting.
-              </p>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                I believe great content should feel like a conversation with a friend - 
-                helpful, honest, and maybe a little bit fun. Whether it's a blog post, 
-                website copy, or a social media caption, I make sure it connects with real people.
-              </p>
+                              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  Hey there! I&apos;m Jebin (but everyone calls me Jebs). I&apos;ve been crafting words 
+                  that actually matter for the past 5+ years. My superpower? Making complex ideas 
+                  sound simple and boring topics sound exciting.
+                </p>
+                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                  I believe great content should feel like a conversation with a friend - 
+                  helpful, honest, and maybe a little bit fun. Whether it&apos;s a blog post, 
+                  website copy, or a social media caption, I make sure it connects with real people.
+                </p>
             </div>
             <div className="space-y-4">
               <div className="flex items-center space-x-4">

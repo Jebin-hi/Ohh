@@ -25,7 +25,7 @@ export function Hero() {
               
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 I turn coffee into content and ideas into stories that actually work. 
-                When I'm not writing, you'll find me exploring new coffee shops or 
+                When I&apos;m not writing, you&apos;ll find me exploring new coffee shops or 
                 brainstorming my next big idea.
               </p>
             </div>

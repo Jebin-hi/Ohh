@@ -29,9 +29,9 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-12 mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl">What people say</h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Don't just take my word for it. Here's what some awesome people I've worked with have to say.
-          </p>
+                      <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Don&apos;t just take my word for it. Here&apos;s what some awesome people I&apos;ve worked with have to say.
+            </p>
         </div>
         <div className="grid md:grid-cols-3 gap-10">
           {testimonials.map((testimonial, index) => (
@@ -45,7 +45,7 @@ export function Testimonials() {
                   </div>
                 </div>
                 <blockquote className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center space-x-4">
                   <Avatar className="w-12 h-12">
