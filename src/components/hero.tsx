@@ -131,11 +131,11 @@ export function Hero() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="group border-blue-500/30 hover:border-blue-500 hover:bg-blue-500/10 px-8 py-6 text-lg font-semibold backdrop-blur-sm"
+              className="group border-blue-500/30 hover:border-blue-500 hover:bg-blue-500/10 px-8 py-6 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 cursor-pointer backdrop-blur-sm"
               aria-label="View portfolio and case studies"
               onClick={handleContactClick}
             >
-              <BookOpen className="mr-3 h-5 w-5" aria-hidden="true" />
+              <BookOpen className="mr-3 h-5 w-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" aria-hidden="true" />
               See My Work
             </Button>
           </nav>
