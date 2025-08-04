@@ -11,7 +11,8 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+// import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export function Navigation() {
   const navItems = [
@@ -20,32 +21,58 @@ export function Navigation() {
       link: "#about",
     },
     {
+      name: "Services",
+      link: "#services",
+    },
+    {
       name: "Work",
       link: "#work",
     },
-    {
-      name: "Guides",
-      link: "#guides",
-      hasSubmenu: true,
-      submenu: [
-        { name: "Content Strategy", link: "#content-strategy" },
-        { name: "Writing Tips", link: "#writing-tips" },
-        { name: "SEO Best Practices", link: "#seo-guides" },
-        { name: "Brand Voice", link: "#brand-voice" },
-      ],
-    },
-    {
-      name: "Articles",
-      link: "#articles",
-      hasSubmenu: true,
-      submenu: [
-        { name: "Latest Posts", link: "#latest-posts" },
-        { name: "Case Studies", link: "#case-studies" },
-        { name: "Industry Insights", link: "#insights" },
-        { name: "Tutorials", link: "#tutorials" },
-      ],
-    },
+    // {
+    //   name: "Guides",
+    //   link: "#guides",
+    //   hasSubmenu: true,
+    //   submenu: [
+    //     { name: "Content Strategy", link: "#content-strategy" },
+    //     { name: "Writing Tips", link: "#writing-tips" },
+    //     { name: "SEO Best Practices", link: "#seo-guides" },
+    //     { name: "Brand Voice", link: "#brand-voice" },
+    //   ],
+    // },
+    // {
+    //   name: "Articles",
+    //   link: "#articles",
+    //   hasSubmenu: true,
+    //   submenu: [
+    //     { name: "Latest Posts", link: "#latest-posts" },
+    //     { name: "Case Studies", link: "#case-studies" },
+    //     { name: "Industry Insights", link: "#insights" },
+    //     { name: "Tutorials", link: "#tutorials" },
+    //   ],
+    // },
   ];
+
+  // Smooth scroll function
+  const smoothScrollTo = (targetId: string) => {
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
+  };
+
+  const handleSayHi = () => {
+    setIsMobileMenuOpen(false);
+    smoothScrollTo("#contact");
+  };
+
+  const handleNavItemClick = (link: string) => {
+    setIsMobileMenuOpen(false);
+    smoothScrollTo(link);
+  };
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
@@ -60,9 +87,9 @@ export function Navigation() {
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
-          <NavItems items={navItems} />
+          <NavItems items={navItems} onItemClick={() => {}} />
           <div className="flex items-center gap-3">
-            <NavbarButton variant="primary">Say Hi</NavbarButton>
+            <NavbarButton variant="primary" className="rounded-2xl" onClick={handleSayHi}>Say Hi</NavbarButton>
           </div>
         </NavBody>
 
@@ -83,7 +110,7 @@ export function Navigation() {
             <div className="flex flex-col space-y-1 w-full">
               {navItems.map((item, idx) => (
                 <div key={`mobile-link-${idx}`} className="w-full">
-                  {item.hasSubmenu ? (
+                  {/* {item.hasSubmenu ? (
                     <div className="w-full">
                       <button
                         onClick={() => handleSubmenuToggle(item.name)}
@@ -123,15 +150,24 @@ export function Navigation() {
                         {item.name}
                       </span>
                     </a>
-                  )}
+                  )} */}
+                  <button
+                      onClick={() => handleNavItemClick(item.link)}
+                      className="relative text-slate-300 hover:text-slate-100 font-medium transition-all duration-300 ease-out group w-full text-left"
+                    >
+                      <span className="block py-2.5 px-3 rounded-md hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-blue-700/10 hover:border hover:border-blue-500/20 transition-all duration-300 ease-out">
+                        {item.name}
+                      </span>
+                    </button>
                 </div>
               ))}
             </div>
             <div className="flex w-full flex-col gap-2 pt-3 border-t border-slate-700/50 mt-2">
+              
               <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={handleSayHi}
                 variant="primary"
-                className="w-full"
+                className="w-full rounded-2xl"
               >
                 Say Hi
               </NavbarButton>

@@ -10,6 +10,7 @@ import {
 
 import React, { useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { LogoIcon } from "./logo-icon";
 
 
 interface NavbarProps {
@@ -206,24 +207,44 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                     onMouseEnter={() => setHovered(idx)}
                   />
                   {item.submenu?.map((subItem, subIdx) => (
-                    <a
+                    <button
                       key={`submenu-${idx}-${subIdx}`}
-                      href={subItem.link}
-                      onClick={onItemClick}
-                      className="block px-4 py-2 text-sm text-slate-300 hover:text-slate-100 hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-blue-700/10 transition-all duration-200"
+                      onClick={() => {
+                        if (onItemClick) onItemClick();
+                        // Smooth scroll to the target
+                        const targetElement = document.querySelector(subItem.link);
+                        if (targetElement) {
+                          targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                            inline: 'nearest'
+                          });
+                        }
+                      }}
+                      className="block w-full text-left px-4 py-2 text-sm text-slate-300 hover:text-slate-100 hover:bg-gradient-to-r hover:from-blue-600/10 hover:to-blue-700/10 transition-all duration-200 bg-transparent border-none cursor-pointer"
                     >
                       {subItem.name}
-                    </a>
+                    </button>
                   ))}
                 </motion.div>
               )}
             </div>
           ) : (
-            <a
+            <button
               onMouseEnter={() => setHovered(idx)}
-              onClick={onItemClick}
-              className="relative px-4 py-2 text-slate-300 hover:text-slate-100 transition-all duration-300 ease-out"
-              href={item.link}
+              onClick={() => {
+                if (onItemClick) onItemClick();
+                // Smooth scroll to the target
+                const targetElement = document.querySelector(item.link);
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                  });
+                }
+              }}
+              className="relative px-4 py-2 text-slate-300 hover:text-slate-100 transition-all duration-300 ease-out bg-transparent border-none cursor-pointer"
             >
               {hovered === idx && (
                 <motion.div
@@ -254,7 +275,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               >
                 {item.name}
               </motion.span>
-            </a>
+            </button>
           )}
         </div>
       ))}
@@ -312,7 +333,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -353,20 +373,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center px-2 py-1 text-sm font-normal text-slate-300 hover:text-slate-100 transition-colors duration-200"
     >
-      {/* Handwritten Typography Logo */}
-      <div className="flex items-center">
-        <span 
-          className="font-bold text-2xl bg-gradient-to-r from-blue-400 via-blue-300 to-slate-200 bg-clip-text text-transparent"
-          style={{
-            fontFamily: '"Caveat", "Kalam", "Comic Sans MS", "Brush Script MT", cursive',
-            fontWeight: '700',
-            letterSpacing: '0.02em',
-            fontStyle: 'normal'
-          }}
-        >
-          Jebs
-        </span>
-      </div>
+      <LogoIcon />
     </a>
   );
 };
