@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Tilt_Neon } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
+import { Toaster } from "@/components/ui/sonner"
 
 const tiltNeon = Tilt_Neon({
   variable: "--font-tilt-neon",
@@ -11,11 +13,18 @@ const tiltNeon = Tilt_Neon({
 export const metadata: Metadata = {
   title: "Jebs Portfolio",
   description: "Hey there! I'm Jebs - a content writer who loves turning ideas into stories that actually work. Check out my guides, articles, and let's create something awesome together.",
+  metadataBase: new URL("https://jebs.vercel.app"),
   keywords: ["content writer", "copywriter", "blog writer", "guides", "articles", "content marketing"],
-  authors: [{ name: "Jebin Sultana" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  authors: [{ name: "Jebin Sultana", url: "https://jebs.vercel.app" }],
   openGraph: {
     title: "Jebs Portfolio",
     description: "Hey there! I'm Jebs - a content writer who loves turning ideas into stories that actually work.",
+    siteName: "Jebs Portfolio",
+    url: "https://jebs.vercel.app",
     type: "website",
   },
 };
@@ -31,6 +40,8 @@ export default function RootLayout({
         className={`${tiltNeon.variable} antialiased bg-background text-foreground`}
       >
         {children}
+        <Analytics />
+        <Toaster position="top-right" />
       </body>
     </html>
   );

@@ -1,60 +1,114 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookOpen, Coffee, Heart, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, BookOpen, Coffee, Heart, Sparkles, Zap, Target, Users, TrendingUp } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="container mx-auto container-spacing section-padding">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center space-y-12">
+    <section className="relative min-h-screen flex items-center justify-center container mx-auto container-spacing section-padding overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Moving Gradient Orbs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full blur-3xl animate-pulse" 
+             style={{
+               animation: 'float-8 8s ease-in-out infinite',
+             }} />
+        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/15 to-blue-700/15 rounded-full blur-3xl animate-pulse" 
+             style={{
+               animation: 'float-10 10s ease-in-out infinite reverse',
+             }} />
+        <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/10 to-blue-600/10 rounded-full blur-3xl animate-pulse" 
+             style={{
+               animation: 'float-12 12s ease-in-out infinite',
+             }} />
+
+        {/* Enhanced Moving Spotlight Effects */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/15 to-purple-500/15 rounded-full blur-3xl" 
+             style={{
+               animation: 'spotlight-15 15s ease-in-out infinite',
+             }} />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-400/12 to-blue-500/12 rounded-full blur-3xl" 
+             style={{
+               animation: 'spotlight-18 18s ease-in-out infinite reverse',
+             }} />
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-blue-500/10 to-cyan-400/10 rounded-full blur-3xl" 
+             style={{
+               animation: 'spotlight-20 20s ease-in-out infinite',
+             }} />
+        
+        {/* Additional Glowing Effects */}
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-gradient-to-r from-blue-300/8 to-indigo-400/8 rounded-full blur-3xl" 
+             style={{
+               animation: 'spotlight-12 12s ease-in-out infinite reverse',
+             }} />
+        <div className="absolute bottom-1/4 left-1/3 w-56 h-56 bg-gradient-to-r from-indigo-400/6 to-blue-300/6 rounded-full blur-3xl" 
+             style={{
+               animation: 'spotlight-16 16s ease-in-out infinite',
+             }} />
+        <div className="absolute top-2/3 right-1/2 w-48 h-48 bg-gradient-to-r from-cyan-400/8 to-blue-400/8 rounded-full blur-3xl" 
+             style={{
+               animation: 'spotlight-14 14s ease-in-out infinite reverse',
+             }} />
+
+        {/* Animated Grid Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+          }} />
+        </div>
+      </div>
+
+      {/* Main Content - Centered */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <div className="space-y-16">
+          {/* Main Headline */}
           <div className="space-y-8">
-            <div className="inline-flex items-center space-x-3 bg-blue-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium">
-              <Sparkles className="h-5 w-5" />
-              <span>Available for new projects</span>
-            </div>
-            
-            <div className="space-y-6">
-              <h1>
-                <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-                  Hi, I&apos;m Jebs
+            <h1 className="space-y-4">
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-bold">
+                <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
+                  I write words that
                 </span>
                 <br />
-                <span className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-normal">
-                  👋 Nice to meet you!
+                <span className="text-slate-200">
+                  actually work
                 </span>
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                I turn coffee into content and ideas into stories that actually work. 
-                When I&apos;m not writing, you&apos;ll find me exploring new coffee shops or 
-                brainstorming my next big idea.
+              </span>
+              <p className="text-xl md:text-2xl text-slate-400 max-w-4xl mx-auto leading-relaxed tracking-wide">
+                No fluff. No jargon. Just content that converts and stories that stick. 
+                If you&apos;re tired of generic copy that sounds like everyone else, 
+                you&apos;re in the right place.
               </p>
-            </div>
+            </h1>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center btn-group">
-              <Button size="lg" className="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                Let&apos;s Work Together
-                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="group border-blue-500/30 hover:border-blue-500 hover:bg-blue-500/10 px-8 py-6 text-lg font-semibold">
-                <BookOpen className="mr-3 h-5 w-5" />
-                Read My Guides
-              </Button>
-            </div>
-            
-            <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
+            {/* Social Proof */}
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-sm text-slate-400">
               <div className="flex items-center space-x-2">
-                <Coffee className="h-5 w-5 text-blue-400" />
-                <span className="font-medium">Coffee enthusiast</span>
+                <Users className="h-5 w-5 text-blue-400" />
+                <span className="font-medium">50+ brands trust me</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Heart className="h-5 w-5 text-blue-400" />
-                <span className="font-medium">Story lover</span>
+                <TrendingUp className="h-5 w-5 text-blue-400" />
+                <span className="font-medium">Average 40% conversion boost</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Zap className="h-5 w-5 text-blue-400" />
-                <span className="font-medium">Creative mind</span>
+                <Target className="h-5 w-5 text-blue-400" />
+                <span className="font-medium">Results-driven approach</span>
               </div>
             </div>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center btn-group">
+            <Button size="lg" className="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
+              Let&apos;s Talk About Your Project
+              <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button variant="outline" size="lg" className="group border-blue-500/30 hover:border-blue-500 hover:bg-blue-500/10 px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+              <BookOpen className="mr-3 h-5 w-5" />
+              See My Work
+            </Button>
           </div>
         </div>
       </div>
