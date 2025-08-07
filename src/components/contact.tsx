@@ -21,7 +21,7 @@ Looking forward to hearing from you!
 Best regards,
 [Your name]`);
     
-    const emailLink = `mailto:hello.jebin2025@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    const emailLink = `mailto:hello@jebin.pro?subject=${emailSubject}&body=${emailBody}`;
   
 
     const scheduleCallSubject = encodeURIComponent("Schedule a Call - Content Writing Consultation 📞");
@@ -42,7 +42,7 @@ Looking forward to connecting!
 Best regards,
 [Your name]`);
     
-   const scheduleCallLink = `mailto:hello.jebin2025@gmail.com?subject=${scheduleCallSubject}&body=${scheduleCallBody}`;
+   const scheduleCallLink = `mailto:hello@jebin.pro?subject=${scheduleCallSubject}&body=${scheduleCallBody}`;
 
   const handleEmailClick = () => {
     window.open(emailLink, '_blank');

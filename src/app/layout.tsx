@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Jebs Portfolio"
   },
   description: "Hey there! I'm Jebs - a content writer who loves turning ideas into stories that actually work. Check out my guides, articles, and let's create something awesome together.",
-  metadataBase: new URL("https://jebs.vercel.app"),
+  metadataBase: new URL("https://jebin.pro"),
   keywords: [
     "content writer",
     "copywriter",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Jebs Portfolio",
     description: "Hey there! I'm Jebs - a content writer who loves turning ideas into stories that actually work. Check out my guides, articles, and let's create something awesome together.",
     siteName: "Jebs Portfolio",
-    url: "https://jebs.vercel.app",
+    url: "https://jebin.pro",
     type: "website",
     locale: "en_US",
     images: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     creator: "@jebs_writer",
   },
   alternates: {
-    canonical: "https://jebs.vercel.app",
+    canonical: "https://jebin.pro",
   },
   category: "Portfolio",
   classification: "Content Writing Services",
@@ -89,8 +89,8 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Jebin Sultana",
     "alternateName": "Jebs",
-    "url": "https://jebs.vercel.app",
-    "email": "hello.jebin2025@gmail.com",
+    "url": "https://jebin.pro",
+    "email": "hello@jebin.pro",
     "jobTitle": "Content Writer & Copywriter",
     "description": "Professional content writer and copywriter with 5+ years of experience specializing in tech, healthcare, finance, and e-commerce content.",
     "knowsAbout": [
@@ -107,7 +107,7 @@ export default function RootLayout({
       "@type": "Occupation",
       "name": "Content Writer",
       "description": "Creating engaging content that converts and connects with audiences",
-      "url": "https://jebs.vercel.app"
+      "url": "https://jebin.pro"
     },
     "sameAs": [
       "https://www.facebook.com/jebinsultanaa",

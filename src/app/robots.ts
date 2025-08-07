@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/private/', '/admin/'],
+      disallow: ['/private/', '/admin/', '/api/'],
     },
-    sitemap: 'https://jebs.vercel.app/sitemap.xml',
+    sitemap: 'https://jebin.pro/sitemap.xml',
   }
 } 
